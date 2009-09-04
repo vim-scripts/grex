@@ -1,0 +1,41 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2773
+
+*grex* is a Vim plugin to provide useful commands to operate on lines matched
+to the last search pattern.  For example, suppose you edit the following
+content:
+
+	#950 bugfix: jump behavior
+	#923 bugfix: vs fold
+	#930 enhancement: foldlevel adjustment
+	#927 todo: release
+	#926 enhancement: performance
+	#924 enhancement: completion
+	#931 bugfix: syntax highlighting
+	#928 enhancement: key mappings
+
+Once you search for a keyword such as "bugfix:", you can yank all lines
+matched to the search pattern with |:Grey|.  After executing |:Grey|, you can
+put the following text:
+
+	#950 bugfix: jump behavior
+	#923 bugfix: vs fold
+	#931 bugfix: syntax highlighting
+
+There is another command |:Gred| which deletes matched lines instead.
+
+This plugin also provides functions and operators to do the same processes as
+|:Gred| or |:Grey|.  See |grex-functions|, |grex-key-mappings| and
+|grex-commands| for the details.
+
+
+Requirements:
+- Vim 7.2 or later
+
+Optionals:
+- |operator-user| 0.0.5 or later (vimscript#2692)
+
+Latest version:
+http://github.com/kana/vim-grex
+
+Document in HTML format:
+http://kana.github.com/config/vim/grex.html
